@@ -7,8 +7,8 @@ The system is designed with **modularity, explainability, and extensibility** in
 
 ---
 
-## 📂 Project Structure
-
+## Project Structure
+```
 Emitrr project/
 │
 ├── medical_ner.py # Medical entity extraction
@@ -19,7 +19,7 @@ Emitrr project/
 ├── notebook.ipynb # End-to-end pipeline demo
 └── README.md
 
-
+```
 ---
 
 Setup Instructions
@@ -38,7 +38,7 @@ python -m spacy download en_core_web_sm
 
 3)Run the Notebook
 
-End-to-End Pipeline Flow
+## End-to-End Pipeline Flow:-
 Medical Entity Extraction (spaCy)
 Rule-Based Medical Summary Generation
 Sentiment Analysis (DistilBERT)
@@ -105,30 +105,19 @@ Synthetic Data
 Generated using clinicians + LLMs for rare emotional states
 
 Q5)How would you train an NLP model to map medical transcripts into SOAP format?
-✅ Answer:
-
 A two-stage approach is most effective:
-
 Stage 1: Information Extraction
-
 NER → Symptoms, Diagnosis, Treatment
-
 Sentiment & Intent → Subjective section
-
 Stage 2: Structured Generation
-
 Fine-tune a seq2seq model (T5 / BART)
-
 Input: raw transcript
-
 Output: structured SOAP JSON
-
 Example:
-
 Input:  Doctor–patient conversation
 Output: { "Subjective": ..., "Objective": ..., ... }
 
-Q5)What rule-based or deep-learning techniques would improve the accuracy of SOAP note generation?
+Q6)What rule-based or deep-learning techniques would improve the accuracy of SOAP note generation?
  Rule-Based Techniques:-
 Medical keyword lexicons
 Section-specific rules (e.g., symptoms → Subjective)
